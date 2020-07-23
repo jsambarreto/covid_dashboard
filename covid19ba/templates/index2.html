@@ -1,5 +1,8 @@
 <!doctype html>
-<html lang="en">
+
+<html lang="pt-br">
+{% load static %}
+{% csrf_token %}
    <head>
       <title>Analise Covid19 - Bahia</title>
       <!-- Bootstrap core CSS -->
@@ -88,8 +91,13 @@
           </div>
 
            
-            <!-- Highcharts display -->
+            <!-- Highcharts display --> 
             <div class="border" id="container" style="min-width: 310px; height: 400px; margin: 0 auto">
+            </div>
+            <h1 class="h2">Mapa de calor da Covid-19 na Bahia</h1>
+            <div class="border" id="container3" style="min-width: 310px; height: 400px; margin: 0 auto">
+            
+            <iframe src="{% static "mapacovid.html" %}"  width=840px height=360px title="Mapa de calor da Covid-19 na Bahia" style="min-width: 310px; height: 400px; margin: 0 auto"></iframe>
             </div>
             <!-- Table data -->
             <h2 class="pt-4">Detalhes</h2>
@@ -101,6 +109,7 @@
       <script src="https://code.highcharts.com/highcharts.js"></script>
       <script src="https://code.highcharts.com/modules/exporting.js"></script>
       <script src="https://code.highcharts.com/modules/export-data.js"></script>
+
       <script>
          _categories = {{categories|safe}};
          _values = {{values|safe}};
@@ -145,6 +154,7 @@
           
          }]
          });
+  
       </script>
       <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
