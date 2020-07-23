@@ -7,7 +7,7 @@
    </head>
    <body>
       <!-- Top Bar -->
-      <nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
+      <nav class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
          <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">Analise Covid19 - Bahia</a>
          <input class="form-control form-control-dark w-80" type="text" placeholder="Search" aria-label="Search">
          <ul class="navbar-nav px-3">
@@ -16,6 +16,7 @@
             </li>
          </ul>
       </nav>
+      <!-- Left Bar-->
       <div class="container-fluid">
       <div class="row">
         <nav class="col-md-2 d-none d-md-block bg-light sidebar">
@@ -69,7 +70,8 @@
             </ul>
           </div>
         </nav>
-
+        
+        <!-- Principal-->
         <main role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-12">
           <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pb-2 mb-3 border-bottom">
             <h1 class="h2">Dashboard</h1>
@@ -87,14 +89,14 @@
 
            
             <!-- Highcharts display -->
-            <div class="border" id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+            <div class="border" id="container" style="min-width: 310px; height: 400px; margin: 0 auto">
+            </div>
             <!-- Table data -->
             <h2 class="pt-4">Detalhes</h2>
             <div class="table-responsive">
             {{table_data|safe}}
             </div>
-            </main>
-      </div>
+        </main>
       <!-- Chartjs libraries -->
       <script src="https://code.highcharts.com/highcharts.js"></script>
       <script src="https://code.highcharts.com/modules/exporting.js"></script>
