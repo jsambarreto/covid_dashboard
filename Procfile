@@ -1,1 +1,1 @@
-web: gunicorn covid19ba.wsgi
+web: gunicorn covid_dashboard.wsgi
