@@ -70,6 +70,12 @@
                   Year-end sale
                 </a>
               </li>
+              <li class="nav-item">
+              <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">  
+                  <span data-feather="file-text"></span>
+                  Data de atualização: {{ data_exibicao }}
+              </h6>  
+              </li>
             </ul>
           </div>
         </nav>
@@ -90,14 +96,23 @@
             </div>
           </div>
 
-           
+
             <!-- Highcharts display --> 
             <div class="border" id="container" style="min-width: 310px; height: 400px; margin: 0 auto">
             </div>
+
+            <div class="border" id="container2" style="min-width: 310px; height: 400px; margin: 0 auto">
+              <img src="{% static "image/CurvaCovid.png" %}" alt="Curva de casos confirmados de Covid 19 - Bahia">
+            </div>
+
+            <div class="border" id="container4" style="min-width: 310px; height: 400px; margin: 0 auto">
+              <img src="{% static "image/CurvaCovidMortalidade.png" %}" alt="Curva mortalidade Covid Bahia">
+            </div>
+
             <h1 class="h2">Mapa de calor da Covid-19 na Bahia</h1>
             <div class="border" id="container3" style="min-width: 310px; height: 400px; margin: 0 auto">
-            
-            <iframe src="{% static "mapacovid.html" %}"  width=840px height=360px title="Mapa de calor da Covid-19 na Bahia" style="min-width: 310px; height: 400px; margin: 0 auto"></iframe>
+              <iframe src="{% static "mapacovid.html" %}"  width=840px height=360px title="Mapa de calor da Covid-19 na Bahia" style="min-width: 310px; height: 400px; margin: 0 auto">
+              </iframe>
             </div>
             <!-- Table data -->
             <h2 class="pt-4">Detalhes</h2>
