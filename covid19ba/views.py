@@ -2,7 +2,7 @@ from django.shortcuts import render
 import pandas as pd
 import os.path
 from datetime import datetime
-from .services import atualizadados, covid19, covid19m
+from .services import atualizadados, covid19, covid19m, mapa
 
 def index(request):
     data_ex = datetime.now().date()
@@ -15,6 +15,7 @@ def index(request):
         atualizadados.atualizadados()
         covid19.covid()
         covid19m.covidm()
+        mapa.atualiza_mapa()
         # read data                                                                                                  
     data = pd.read_csv("covid19ba/data/caso_full.csv", sep = ',')
     data = data.loc[data['state']=='BA']

@@ -16,7 +16,7 @@ def atualizadados():
 
 def ler_data():
     data_at = datetime.now().date()
-    #if os.path.exists('covid19ba/data/data_at.txt'): 
+
     rr=open('covid19ba/data/data_at.txt', 'w+')
     rr.write(str(data_at))
     at = rr.readline()
